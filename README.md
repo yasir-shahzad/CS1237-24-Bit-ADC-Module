@@ -2,6 +2,12 @@
 
 This repository contains information and resources for the CS1237, a high-precision, low-power Analog-to-Digital Converter (ADC) module with a single differential input channel.
 
+## Schematic Diagram
+![CH32V003_block.png](https://github.com/yasir-shahzad/CS1237-24-Bit-ADC-Module/blob/master/Images/Schematic.png)
+
+## PCB Files
+![CH32V003_block.png](https://github.com/yasir-shahzad/CS1237-24-Bit-ADC-Module/blob/master/Images/PCB%20Board.png)
+
 ## Features
 
 - **24-Bit Resolution**: Ensures no missing codes, providing high accuracy and precision.
