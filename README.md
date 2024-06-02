@@ -1,4 +1,4 @@
-# CS1237: 24-Bit High-Precision ADC Module
+# CS1237 24-Bit High-Precision ADC Module
 
 This repository contains information and resources for the CS1237, a high-precision, low-power Analog-to-Digital Converter (ADC) module with a single differential input channel.
 
