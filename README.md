@@ -29,9 +29,8 @@ This repository contains information and resources for the CS1237, a high-precis
 
 ## Resources
 
-- **Datasheet**: [Link to datasheet] (Replace with the actual link if you have it)
-- **Example Code**: [Link to example code] (Replace with the actual link if you have it)
-- **Pinout Diagram**: [Link to pinout diagram] (Replace with the actual link if you have it)
+- **Datasheet**: [CS1237_Datasheet] (https://github.com/yasir-shahzad/CS1237-24-Bit-ADC-Module/blob/master/documents/cs1237_datasheet.pdf)
+
 
 ## Getting Started
 
