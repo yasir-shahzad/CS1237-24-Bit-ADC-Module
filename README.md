@@ -2,27 +2,6 @@
 
 This repository contains information and resources for the CS1237, a high-precision, low-power Analog-to-Digital Converter (ADC) module with a single differential input channel.
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=yasir-shahzad&label=Profile%20views&color=0e75b6&style=flat" alt="yasir-shahzad" /> </p>
-
-
-![Hit Counter](https://visitor-badge.laobi.icu/badge?page_id=yasir-shahzad_SoftI2C)
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Yasir Shahzad</title>
-</head>
-<body>
-    <!-- Other content -->
-    <p align="left">
-      <img src="https://komarev.com/ghpvc/?username=yasir-shahzad&label=Profile%20views&color=0e75b6&style=flat" alt="yasir-shahzad" />
-    </p>
-    <!-- Other content -->
-</body>
-</html>
-
 ## Schematic Diagram
 ![Schematic Diagram](https://github.com/yasir-shahzad/CS1237-24-Bit-ADC-Module/blob/master/Images/Schematic.png)
 
