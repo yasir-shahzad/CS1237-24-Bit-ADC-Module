@@ -27,6 +27,29 @@ This repository contains information and resources for the CS1237, a high-precis
 - **Intelligent Converters**: Can be integrated into smart conversion devices.
 - **Portable Measurement Devices**: Ideal for portable and handheld measuring instruments.
 
+## ⚠️ Important: AVDD / Reference Current Budget for 350Ω Load Cells
+
+The onboard TL431 voltage reference is current-limited by resistor **R1 (1kΩ)**. While sufficient for high-impedance load cells ($\ge 1.7\text{k}\Omega$), it cannot supply enough current for standard **350Ω full-bridge load cells**.
+
+### Issue Summary
+At 2.5V excitation, a 350Ω bridge draws **~7.1mA** ($2.5\text{V} / 350\\Omega$). Adding the TL431 minimum bias current (~1mA), the total required budget is **~8.1mA**. 
+
+The stock resistor **R1 = 1kΩ** severely restricts current:
+* **At DVDD = 3.3V:** $I = (3.3\text{V} - 2.5\text{V}) / 1\text{k}\Omega = \mathbf{0.8\text{mA}}$ *(insufficient)*
+* **At DVDD = 5.0V:** $I = (5.0\text{V} - 2.5\text{V}) / 1\text{k}\Omega = \mathbf{2.5\text{mA}}$ *(insufficient)*
+
+**Symptom:** The reference voltage collapses well below 2.5V under load, dropping below the CS1237 minimum reference threshold (1.5V) and causing saturated or stuck ADC readings.
+
+### Fix
+Lower the effective series resistance by adding a resistor between the **DVDD** and **AVDD** nodes or soldering a resistor directly in parallel with **R1**:
+
+| DVDD Voltage | Parallel Resistor | Equivalent R1 | Available Current | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| **3.3V / 5.0V** | **100Ω** | ~91Ω | ~8.8mA at 3.3V<br>~27.4mA at 5.0V | **Universal:** Works reliably for both 3.3V and 5V rails. |
+| **5.0V Only** | **220Ω** | ~180Ω | ~13.9mA at 5.0V | **5V Only:** Lower quiescent power, but insufficient for 3.3V. |
+
+> **Note:** Measure the resistance across the excitation terminals (`+E` / `-E`) with a multimeter if you are unsure of your load cell's bridge impedance.
+
 ## Resources
 
 - **Datasheet**: [CS1237 Datasheet](https://github.com/yasir-shahzad/CS1237-24-Bit-ADC-Module/blob/master/documents/cs1237_datasheet.pdf)
